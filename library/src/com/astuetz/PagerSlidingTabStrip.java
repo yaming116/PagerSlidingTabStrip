@@ -467,7 +467,9 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 
 	public void setShouldExpand(boolean shouldExpand) {
 		this.shouldExpand = shouldExpand;
-		requestLayout();
+                if(pager != null){
+			requestLayout();
+		}
 	}
 
 	public boolean getShouldExpand() {
